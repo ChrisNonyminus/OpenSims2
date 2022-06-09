@@ -10,7 +10,9 @@
 
 // cRZString -- Reimplementation of RZ's string utility class.
 
-class cRZString : public std::string, public cIGZString {
+// TODO: move function definitions to their own cpp file.
+
+class cRZString : public cIGZString {
 private:
   std::string str;
   uint32_t refs;
@@ -20,7 +22,7 @@ public:
   ~cRZString() { str.clear(); }
   cRZString(const std::string &str) { this->str = str; }
   cRZString(const cRZString &str, size_t pos, size_t len = std::string::npos) {
-    this->str = str.substr(pos, len);
+    this->str = str.str.substr(pos, len);
   }
   cRZString(const char *str) { this->str = std::string(str); }
   bool QueryInterface(uint32_t clsid, void **ppv) {
