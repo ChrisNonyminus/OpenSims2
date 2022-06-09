@@ -8,4 +8,5 @@
 struct cIGZUnknown {
   virtual bool QueryInterface(uint32_t, void **) = 0;
   virtual uint32_t AddRef() = 0;
+  virtual uint32_t Release() = 0;
 };
