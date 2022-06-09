@@ -1,2 +1,2 @@
-## OpenSims2
+# OpenSims2
 An open-source reimplementation of The Sims 2, using symbols found in the Mach-O executables for the Mac OS X version (specifically for the revision that came with the Bon Voyage expansion pack) of the game as reference.
