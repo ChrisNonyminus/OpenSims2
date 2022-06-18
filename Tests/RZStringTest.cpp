@@ -53,11 +53,12 @@ int main() {
   str.Append(" And I'm all out of bubblegum.\n");
   // Replace a substring with a new string.
   time_start = std::chrono::high_resolution_clock::now();
-  str.Replace(str.Find("ass", strlen("ass")), "***");
+  str.Replace(str.Find("ass"), "***");
   time_end = std::chrono::high_resolution_clock::now();
   time_duration = std::chrono::duration_cast<std::chrono::nanoseconds>(
       time_end - time_start);
-  printf("cRZString Replace: %ld nanoseconds\n", time_duration.count());
+  printf("cRZString Find and Replace: %ld nanoseconds\n",
+         time_duration.count());
   // Get the final length of the string.
   size_t len4 = str.Strlen();
   // Print everything out.

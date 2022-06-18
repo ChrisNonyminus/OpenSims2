@@ -268,7 +268,7 @@ public:
   bool EndsWith(cIGZString const &rhs, bool case_sensitive = false) {
     return EndsWith(rhs.Data(), rhs.Strlen(), case_sensitive);
   }
-  size_t Find(const char *str, size_t pos, bool case_sensitive = false) {
+  size_t Find(const char *str, size_t pos = 0, bool case_sensitive = false) {
     if (case_sensitive)
       return this->str.find(str, pos);
     cRZString str2(*this);
